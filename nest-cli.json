@@ -1,8 +1,16 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": ".",
+  "entryFile": "src/main",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": false,
+    "assets": [
+      {
+        "include": "convex/_generated/**/*",
+        "outDir": "convex/_generated"
+      }
+    ],
+    "watchAssets": true
   }
 }
